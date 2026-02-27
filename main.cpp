@@ -1,19 +1,12 @@
-#include <iostream>
+#include <QApplication>
+#include "mainwindow.h"
 
-using namespace std;
-
-void foo() {
-    cout << "foo\n";
-}
-
-void bar() {
-	cout << "bar\n";
-}
-
-int main()
+int main(int argc, char *argv[])
 {
-    cout << "Hello World!" << endl;
-    foo();
-	
-    return 0;
+    QApplication a(argc, argv);
+
+    MainWindow w;
+    w.show();
+
+    return a.exec();
 }
